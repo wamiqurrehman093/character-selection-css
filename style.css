@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    text-align: center;
+    padding: 4px;
+    background-color: aliceblue;
+    color: gray;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#window {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.character-window {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+#p1-window {
+    justify-content: end;
+}
+
+#p2-window {
+    justify-content: start;
+}
+
+.selected-characters {
+    display: grid;
+    grid-template-columns: 132px 132px;
+    background-color: aqua;
+    height: fit-content;
+}
+
+.character-holder {
+    width: 128px;
+    height: 128px;
+}
+
+#roster-list {
+    display: grid;
+    grid-template-columns: repeat(4, 132px);
+    justify-self: center;
+}
