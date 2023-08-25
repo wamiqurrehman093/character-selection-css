@@ -1,10 +1,14 @@
 body {
     margin: 0;
     text-align: center;
-    padding: 4px;
+    padding: 0px;
     background-color: aliceblue;
     color: gray;
     font-family: 'Courier New', Courier, monospace;
+}
+
+img {
+    image-rendering: pixelated;
 }
 
 #window {
@@ -15,6 +19,7 @@ body {
 .character-window {
     display: grid;
     grid-template-columns: auto;
+    grid-template-rows: 1fr auto;
 }
 
 #p1-window {
@@ -28,8 +33,15 @@ body {
 .selected-characters {
     display: grid;
     grid-template-columns: 132px 132px;
-    background-color: aqua;
     height: fit-content;
+}
+
+#p1-window .selected-characters {
+    justify-content: end;
+}
+
+#p2-window .selected-characters {
+    justify-content: start;
 }
 
 .character-holder {
@@ -41,4 +53,42 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 132px);
     justify-self: center;
+}
+
+.current-character {
+    height: auto;
+}
+
+.current-character .character-holder {
+    width: 512px;
+    height: 512px;
+}
+
+.player-info {
+    display: grid;
+}
+
+#info-p2{
+    grid-template-columns: 270px auto;
+}
+
+#info-p1{
+    grid-template-columns: auto 270px;
+}
+
+.game-controller {
+    width: 192px;
+    height: 192px;
+}
+
+.player-name-icon {
+    display: grid;
+}
+
+.player-icon {
+    
+}
+.player-name {
+    font-size: 22px;
+    margin: 0;
 }
