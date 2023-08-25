@@ -109,7 +109,7 @@ img {
     font-weight: bold;
 }
 .timer-value {
-    font-size: 48px;
+    font-size: 42px;
     color: orange;
 }
 
@@ -147,7 +147,6 @@ img {
     }
 
     #window, #window-controls {
-        display: grid;
         grid-template-columns: 384px 396px 384px;
         column-gap: 24px;
     }
@@ -213,4 +212,90 @@ img {
     .player-name {
         font-size: 16px;
     }
+}
+
+@media screen and (max-width: 920px) {
+    body {
+        padding: 0;
+    }
+    #window {
+        grid-template-columns: auto;
+        grid-template-areas:
+        "roster-list"
+        "p1-window p2-window";
+        margin: 0px 32px;
+        padding: 0px 32px;
+    }
+   
+    #roster-list {
+        grid-template-columns: repeat(8, 75px);
+        grid-area: roster-list;
+        margin: 0px 0px 250px 0px;
+        height: 225px;
+    }
+
+    #p1-window {
+        justify-content: start;
+        grid-area: p1-window;
+        margin: 250px 0px 0px 0px;
+    }
+
+    #p2-window {
+        justify-content: end;
+        grid-area: p2-window;
+        margin: 250px 0px 0px 0px;
+    }
+    #window-controls {
+        grid-template-columns: 180px 48px 180px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #window {
+        grid-template-areas:
+        "roster-list"
+        "p1-window"
+        "p2-window";
+    }
+    #roster-list {
+        grid-template-columns: repeat(6, 75px);
+        margin: 0px 0px 0px 0px;
+        height: 300px;
+    }
+    #p1-window {
+        justify-content: start;
+        grid-area: p1-window;
+        margin: 16px 0px 0px 0px;
+    }
+    .character-window {
+        grid-template-columns: 162px 1fr;
+    }
+   
+    #p2-window .current-character {
+        order: 2;
+    }
+    #info-p2 {
+        order: 1;
+    }
+    #p2-window {
+        justify-content: end;
+        grid-area: p2-window;
+        margin: 16px 0px 0px 0px;
+        gap: 8px;
+        grid-template-columns: 1fr 162px;
+    }
+    .current-character .character-holder {
+        width: 162px;
+        height: 162px;
+    }
+
+    .game-controller {
+        width: 81px;
+        height: 81px;
+    }
+    #roster-list .character-holder {
+        width: 72px;
+        height: 72px;
+    }
+
 }
