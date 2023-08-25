@@ -13,7 +13,9 @@ img {
 
 #window {
     display: grid;
-    grid-template-columns: 512px auto 512px;
+    grid-template-columns: 512px 528px 512px;
+    column-gap: 32px;
+    justify-content: center;
 }
 
 .character-window {
@@ -95,9 +97,10 @@ img {
 
 #window-controls {
     display: grid;
-    grid-template-columns: 512px 1fr 512px;
+    grid-template-columns: 512px 528px 512px;
     width: 100%;
     margin-top: 4px;
+    column-gap: 32px;
     justify-content: center;
 }
 
@@ -125,4 +128,89 @@ img {
 
 .ready-button:active {
     background-color:rgb(40, 100, 150);
+}
+
+@media screen and (max-width: 1620px) {
+    .current-character .character-holder {
+        width: 384px;
+        height: 384px;
+    }
+
+    .character-holder {
+        width: 96px;
+        height: 96px;
+    }   
+
+    .game-controller {
+        width: 144px;
+        height: 144px;
+    }
+
+    #window, #window-controls {
+        display: grid;
+        grid-template-columns: 384px 396px 384px;
+        column-gap: 24px;
+    }
+
+    #info-p2 {
+        grid-template-columns: 203px auto;
+    }
+
+    #info-p1 {
+        grid-template-columns: auto 203px;
+    }
+
+    .selected-characters {
+        grid-template-columns: 99px 99px;
+    }
+
+    #roster-list {
+        grid-template-columns: repeat(4, 99px);
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .current-character .character-holder {
+        width: 288px;
+        height: 288px;
+    }
+
+    .character-holder {
+        width: 72px;
+        height: 72px;
+    }   
+
+    .game-controller {
+        width: 108px;
+        height: 108px;
+    }
+
+    #window, #window-controls {
+        grid-template-columns: 288px 297px 288px;
+        column-gap: 18px;
+    }
+
+    #info-p2 {
+        grid-template-columns: 153px auto;
+    }
+
+    #info-p1 {
+        grid-template-columns: auto 153px;
+    }
+
+    .selected-characters {
+        grid-template-columns: 75px 75px;
+    }
+
+    #roster-list {
+        grid-template-columns: repeat(4, 75px);
+    }
+
+    .icon-link {
+        font-size: 12px;
+    }
+    
+    .player-name {
+        font-size: 16px;
+    }
 }
