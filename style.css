@@ -119,7 +119,10 @@ img {
 }
 
 .ready-button:hover {
-    color: steelblue;
-    background-color:white;
+    background-color:rgb(110, 160, 210);
 
+}
+
+.ready-button:active {
+    background-color:rgb(40, 100, 150);
 }
