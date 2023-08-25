@@ -1,7 +1,7 @@
 body {
     margin: 0;
     text-align: center;
-    padding: 0px;
+    padding: 0px 32px;
     background-color: aliceblue;
     color: gray;
     font-family: 'Courier New', Courier, monospace;
@@ -13,7 +13,7 @@ img {
 
 #window {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 512px auto 512px;
 }
 
 .character-window {
@@ -91,4 +91,35 @@ img {
 .player-name {
     font-size: 22px;
     margin: 0;
+}
+
+#window-controls {
+    display: grid;
+    grid-template-columns: 512px 1fr 512px;
+    width: 100%;
+    margin-top: 4px;
+    justify-content: center;
+}
+
+#timer p {
+    margin: 0;
+    font-weight: bold;
+}
+.timer-value {
+    font-size: 48px;
+    color: orange;
+}
+
+.ready-button {
+    color: white;
+    background-color:steelblue;
+    border: 2px solid black;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.ready-button:hover {
+    color: steelblue;
+    background-color:white;
+
 }
