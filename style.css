@@ -46,24 +46,60 @@ img {
     justify-content: start;
 }
 
+.selected-character, .character-profile {
+    position: relative;
+    width: 132px;
+    height: 132px;
+}
+
 .character-holder {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
     width: 128px;
     height: 128px;
+}
+
+.character-picture {
+    position: absolute;
+    z-index: 2;
+    width: 120px;
+    height: 120px;
+    top: 4px;
+    left: 4px;
+   /*  background-color:rgba(0, 0, 255, 0.5); */
+}
+
+
+.current-character {
+    position: relative;
+    width: 512px;
+    height: auto;
+}
+
+.current-character .character-holder {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 512px;
+    height: 512px;
+}
+
+.current-character .character-picture {
+    position: absolute;
+    z-index: 2;
+    width: 480px;
+    height: 480px;
+    top: 16px;
+    left: 16px;
 }
 
 #roster-list {
     display: grid;
     grid-template-columns: repeat(4, 132px);
     justify-self: center;
-}
-
-.current-character {
-    height: auto;
-}
-
-.current-character .character-holder {
-    width: 512px;
-    height: 512px;
 }
 
 .player-info {
@@ -139,7 +175,30 @@ img {
     .character-holder {
         width: 96px;
         height: 96px;
-    }   
+    }
+
+    .selected-character, .character-profile {
+        width: 99px;
+        height: 99px;
+    }
+
+    .character-picture {
+        width: 90px;
+        height: 90px;
+        top: 3px;
+        left: 3px;
+    }
+
+    .current-character {
+        width: 384px;
+    }
+
+    .current-character .character-picture {
+        width: 360px;
+        height: 360px;
+        top: 12px;
+        left: 12px;
+    }
 
     .game-controller {
         width: 144px;
@@ -177,7 +236,30 @@ img {
     .character-holder {
         width: 72px;
         height: 72px;
-    }   
+    }
+
+    .selected-character, .character-profile {
+        width: 75px;
+        height: 75px;
+    }
+
+    .character-picture {
+        width: 68px;
+        height: 68px;
+        top: 2px;
+        left: 2px;
+    }
+
+    .current-character {
+        width: 288px;
+    }
+
+    .current-character .character-picture {
+        width: 270px;
+        height: 270px;
+        top: 9px;
+        left: 9px;
+    }
 
     .game-controller {
         width: 108px;
@@ -223,7 +305,7 @@ img {
         grid-template-areas:
         "roster-list"
         "p1-window p2-window";
-        margin: 0px 32px;
+        margin: 0px 32px 32px 32px;
         padding: 0px 32px;
     }
    
@@ -245,8 +327,33 @@ img {
         grid-area: p2-window;
         margin: 250px 0px 0px 0px;
     }
+
     #window-controls {
         grid-template-columns: 180px 48px 180px;
+    }
+
+    .selected-character, .character-profile {
+        width: 75px;
+        height: 75px;
+    }
+
+    .character-picture {
+        width: 68px;
+        height: 68px;
+        top: 2px;
+        left: 2px;
+    }
+
+    .current-character {
+        width: 288px;
+        margin-bottom: 148px;
+    }
+
+    .current-character .character-picture {
+        width: 270px;
+        height: 270px;
+        top: 9px;
+        left: 9px;
     }
 }
 
@@ -257,16 +364,19 @@ img {
         "p1-window"
         "p2-window";
     }
+
     #roster-list {
         grid-template-columns: repeat(6, 75px);
         margin: 0px 0px 0px 0px;
         height: 300px;
     }
+
     #p1-window {
         justify-content: start;
         grid-area: p1-window;
-        margin: 16px 0px 0px 0px;
+        margin: 16px 0px 32px 0px;
     }
+
     .character-window {
         grid-template-columns: 162px 1fr;
     }
@@ -274,9 +384,11 @@ img {
     #p2-window .current-character {
         order: 2;
     }
+
     #info-p2 {
         order: 1;
     }
+
     #p2-window {
         justify-content: end;
         grid-area: p2-window;
@@ -284,6 +396,7 @@ img {
         gap: 8px;
         grid-template-columns: 1fr 162px;
     }
+
     .current-character .character-holder {
         width: 162px;
         height: 162px;
@@ -298,4 +411,27 @@ img {
         height: 72px;
     }
 
+    .selected-character, .character-profile {
+        width: 75px;
+        height: 75px;
+    }
+
+    .character-picture {
+        width: 68px;
+        height: 68px;
+        top: 2px;
+        left: 2px;
+    }
+
+    .current-character {
+        width: 162px;
+        margin-bottom: 0px;
+    }
+
+    .current-character .character-picture {
+        width: 152px;
+        height: 152px;
+        top: 5px;
+        left: 5px;
+    }
 }
