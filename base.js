@@ -23,3 +23,5 @@ function adjustP2Cursor() {
 }
 
 adjustP2Cursor();
+
+window.addEventListener("resize", adjustP2Cursor)
