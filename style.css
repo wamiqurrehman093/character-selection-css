@@ -9,6 +9,7 @@ body {
 
 img {
     image-rendering: pixelated;
+    border-radius: 50%;
 }
 
 #window {
@@ -59,6 +60,7 @@ img {
     left: 0;
     width: 128px;
     height: 128px;
+    background-color: black;
 }
 
 .character-picture {
@@ -68,6 +70,7 @@ img {
     height: 120px;
     top: 4px;
     left: 4px;
+   /*  background-color: white; */
    /*  background-color:rgba(0, 0, 255, 0.5); */
 }
 
@@ -117,6 +120,7 @@ img {
 .game-controller {
     width: 192px;
     height: 192px;
+    border-radius: 0%;
 }
 
 .player-name-icon {
