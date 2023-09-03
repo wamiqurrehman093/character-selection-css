@@ -11,6 +11,13 @@ a {
     color: rgb(220, 220, 220);
 }
 
+.not-ready {
+    background-color: steelblue;
+}
+.all-ready {
+    background-color: rgb(38, 180, 82);
+}
+
 img {
     image-rendering: pixelated;
     border-radius: 50%;
@@ -193,7 +200,6 @@ img {
 
 .ready-button {
     color: white;
-    background-color:steelblue;
     border: 2px solid black;
     font-size: 32px;
     font-weight: bold;
