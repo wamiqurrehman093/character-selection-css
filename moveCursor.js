@@ -1,8 +1,10 @@
 document.addEventListener("keydown", function(event) {
-    if (data.p1.keys.movementKeys.includes(event.key)) {
-        moveP1Cursor(event.key)
-    } else if (data.p2.keys.movementKeys.includes(event.key)) {
-        moveP2Cursor(event.key)
+    if (data[player].selectedCharacters.length < 4) {
+        if (data.p1.keys.movementKeys.includes(event.key)) {
+            moveP1Cursor(event.key)
+        } else if (data.p2.keys.movementKeys.includes(event.key)) {
+            moveP2Cursor(event.key)
+        }
     }
 })
 
