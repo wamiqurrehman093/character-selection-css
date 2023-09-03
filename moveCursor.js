@@ -1,7 +1,7 @@
 document.addEventListener("keydown", function(event) {
-    if (data.p1.keys.includes(event.key)) {
+    if (data.p1.keys.movementKeys.includes(event.key)) {
         moveP1Cursor(event.key)
-    } else if (data.p2.keys.includes(event.key)) {
+    } else if (data.p2.keys.movementKeys.includes(event.key)) {
         moveP2Cursor(event.key)
     }
 })
