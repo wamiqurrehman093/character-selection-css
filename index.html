@@ -18,15 +18,27 @@
         <div id="guide-modal" class="modal">
             <div id="guide-content" class="modal-content">
                 <h1>Keyboard Controls</h1>
-                <div id="p1-controls" class="controls">
-                    <h2>Player 1 Controls</h2>
-                    <p>Use WASD keys to move the cursor.</p>
-                    <p>Use Space key to select a character.</p>
-                </div>
-                <div id="p2-controls" class="controls">
-                    <h2>Player 2 Controls</h2>
-                    <p>Use Arrow keys to move the cursor.</p>
-                    <p>Use Enter key to select a character.</p>
+                <div class="controls">
+                    <div id="p1-controls" class="player-controls">
+                        <h2>Player 1 Controls</h2>
+                        <div class="movement-controls">
+                            <p class="up-key key">W</p>
+                            <p class="left-key key">A</p>
+                            <p class="down-key key">S</p>
+                            <p class="right-key key">D</p>
+                        </div>
+                        <p class="select-key key">SPACE</p>
+                    </div>
+                    <div id="p2-controls" class="player-controls">
+                        <h2>Player 2 Controls</h2>
+                        <div class="movement-controls">
+                            <p class="up-key key">&uarr;</p>
+                            <p class="left-key key">&larr;</p>
+                            <p class="down-key key">&darr;</p>
+                            <p class="right-key key">&rarr;</p>
+                        </div>
+                        <p class="select-key key">Enter</p>
+                    </div>
                 </div>
                 <button class="close">OKAY</button>
             </div>

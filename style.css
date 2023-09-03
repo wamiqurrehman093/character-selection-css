@@ -57,6 +57,75 @@ a {
     cursor: pointer;
 }
 
+.controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.player-controls {
+    display: grid;
+}
+
+.player-controls h2 {
+    margin: 8px 0px;
+}
+
+.player-controls h3 {
+    margin: 4px 0px;
+}
+.movement-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    width: fit-content;
+    height: fit-content;
+    justify-self: center;
+    gap: 8px;
+}
+
+.movement-controls * {
+    width: 64px;
+    height: fit-content;
+    margin: 0;
+    padding: 24px 0px;
+}
+
+.key {
+    border: 1px solid black;
+}
+
+.key:hover {
+    background-color: rgb(38, 180, 82);
+    color: white
+}
+
+#p1-controls .movement-controls p {
+    font-weight: lighter;
+}
+.up-key {
+    grid-column-start: 2;
+}
+.left-key {
+    grid-row-start: 2;
+}
+.down-key {
+    grid-row-start: 2;
+}
+.right-key {
+    grid-row-start: 2;
+}
+
+.select-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 55%;
+    justify-self: center;
+}
+.select-key {
+    width: 55%;
+    justify-self: center;
+    padding: 16px 0px;
+}
 .all-ready {
     background-color: rgb(38, 180, 82);
 }
