@@ -1,4 +1,4 @@
-var timer = setInterval(updateTimer, 1000)
+var timer; 
 var timerValue = document.getElementsByClassName("timer-value")[0]
 
 function updateTimer(){
