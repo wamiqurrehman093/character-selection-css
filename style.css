@@ -324,14 +324,14 @@ img {
     font-weight: bold;
 }
 
-.ready-button:hover {
+/* .ready-button:hover {
     background-color:rgb(110, 160, 210);
 
 }
 
 .ready-button:active {
     background-color:rgb(40, 100, 150);
-}
+} */
 
 @media screen and (max-width: 1620px) {
     .current-character .character-holder {
