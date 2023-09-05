@@ -1,14 +1,3 @@
-document.addEventListener("keydown", function (event) {
-    if (modal.style.display !== "none") {
-        return;
-    }
-    if (data.p1.keys.selectionKey.includes(event.key)) {
-        selectCharacter("p1")
-    } else if (data.p2.keys.selectionKey.includes(event.key)) {
-        selectCharacter("p2")
-    }
-})
-
 function selectCharacter(player) {
     if (!data[player].selectedCharacters.includes(data[player].cursor.parentID) && data[player].selectedCharacters.length < 4) {
         data[player].selectedCharacters.push(data[player].cursor.parentID);

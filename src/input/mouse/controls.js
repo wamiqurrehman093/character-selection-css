@@ -1,19 +1,30 @@
-document.addEventListener("keydown", function(event) {
-    if (modal.style.display !== "none") {
-        return;
-    }
-    if (data.p1.keys.movementKeys.includes(event.key)) {
-        if (data.p1.selectedCharacters.length < 4) {
-            moveP1Cursor(event.key)
-        }
-    } else if (data.p2.keys.movementKeys.includes(event.key)) {
-        if (data.p2.selectedCharacters.length < 4) {
-            moveP2Cursor(event.key)
-        }
-    }
-})
+var characters = document.getElementsByClassName("character-picture");
 
-function moveP1Cursor(key){
+function setupInputUsingMouse(){
+    for (var i = 0; i < characters.length; i++){
+        characters[i].addEventListener("click", function(event){
+            var elementID = event.currentTarget.parentElement.id
+            var elementIndex = parseInt(elementID.split("-")[1])
+            if (data.p1.selectedCharacters.length < 4) {
+                if (elementID === data.p1.cursor.parentID) {
+                    selectCharacter("p1")
+                } else {
+                    changeCursorTo("p1", elementIndex)
+                }
+            } else if (data.p2.selectedCharacters.length < 4) {
+                if (elementID === data.p2.cursor.parentID) {
+                    selectCharacter("p2")
+                } else {
+                    changeCursorTo("p2", elementIndex)
+                }
+            }
+        })
+    }
+}
+
+setupInputUsingMouse();
+
+/* function moveP1Cursor(key){
     if (key === "w") {
         moveCursor("p1", "UP")
     } else if (key === "a") {
@@ -68,4 +79,4 @@ function changeCursorTo(player, position) {
     data[player].cursor.element = characterPicture;
     data[player].cursor.parentID = "c-" + position;
     data[player].mainPicture.src = characterPicture.src;
-}
+} */
