@@ -1,10 +1,10 @@
 var modal = document.getElementById("controls-guide-modal");
 modal.style.display = "block";
 
-if ('ontouchstart' in window || (window.DocumentTouch && document instanceof DocumentTouch) || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0) {
+var touchEnabled = 'ontouchstart' in window || (window.DocumentTouch && document instanceof DocumentTouch) || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0;
+if (touchEnabled || ['iOS', 'Android'].includes(getOS())) {
     document.getElementById("mouse-controls-guide").style.display = "block";
 } else {
-    alert("Touch not supported!")
     document.getElementById("keyboard-controls-guide").style.display = "block";
 }
 
