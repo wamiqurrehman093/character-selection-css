@@ -1,7 +1,7 @@
 var modal = document.getElementById("controls-guide-modal");
 modal.style.display = "block";
 
-if (window.DocumentTouch && document instanceof DocumentTouch) {
+if ('ontouchstart' in window || (window.DocumentTouch && document instanceof DocumentTouch) || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0) {
     document.getElementById("mouse-controls-guide").style.display = "block";
 } else {
     document.getElementById("keyboard-controls-guide").style.display = "block";
