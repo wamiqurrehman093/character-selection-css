@@ -2,6 +2,7 @@ var modal = document.getElementById("controls-guide-modal");
 modal.style.display = "block";
 
 var touchEnabled = 'ontouchstart' in window || (window.DocumentTouch && document instanceof DocumentTouch) || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0;
+
 if (touchEnabled || ['iOS', 'Android'].includes(getOS())) {
     document.getElementById("mouse-controls-guide").style.display = "block";
 } else {
