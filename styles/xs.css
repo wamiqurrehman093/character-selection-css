@@ -1,0 +1,91 @@
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    #info-p1 {
+        grid-template-columns: 1fr auto;
+    }
+
+    #info-p2 {
+        grid-template-columns: auto 1fr;
+    }
+
+    .selected-characters {
+        grid-template-columns: 56px 56px;
+        width: fit-content;
+    }
+
+    #window-controls {
+        grid-template-columns: 135px 48px 135px;
+    }
+
+    #roster-list {
+        grid-template-columns: repeat(6, 56px);
+        margin: 0px 0px 0px 0px;
+        height: 225px;
+    }
+
+    .character-window {
+        grid-template-columns: 121px 1fr;
+    }
+
+    #p1-window {
+        justify-content: start;
+        grid-area: p1-window;
+        margin: 12px 0px 24px 0px;
+    }
+
+    #p2-window {
+        justify-content: end;
+        grid-area: p2-window;
+        margin: 8px 0px 0px 0px;
+        gap: 0px;
+        grid-template-columns: 1fr 121px;
+    }
+
+    .current-character .character-holder {
+        width: 121px;
+        height: 121px;
+    }
+
+    .game-controller {
+        width: 60px;
+        height: 60px;
+    }
+
+    #roster-list .character-holder {
+        width: 55px;
+        height: 55px;
+    }
+
+    .selected-character,
+    .character-profile {
+        width: 56px;
+        height: 56px;
+    }
+
+    .selected-character .character-holder {
+        width: 55px;
+        height: 55px;
+    }
+
+    .character-picture {
+        width: 51px;
+        height: 51px;
+        top: 2px;
+        left: 2px;
+    }
+
+    .current-character {
+        width: 121px;
+        margin-bottom: 0px;
+    }
+
+    .current-character .character-picture {
+        width: 114px;
+        height: 114px;
+        top: 4px;
+        left: 4px;
+    }
+}

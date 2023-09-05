@@ -1,0 +1,60 @@
+@media screen and (max-width: 1620px) {
+    .current-character .character-holder {
+        width: 384px;
+        height: 384px;
+    }
+
+    .character-holder {
+        width: 96px;
+        height: 96px;
+    }
+
+    .selected-character, .character-profile {
+        width: 99px;
+        height: 99px;
+    }
+
+    .character-picture {
+        width: 90px;
+        height: 90px;
+        top: 3px;
+        left: 3px;
+    }
+
+    .current-character {
+        width: 384px;
+    }
+
+    .current-character .character-picture {
+        width: 360px;
+        height: 360px;
+        top: 12px;
+        left: 12px;
+    }
+
+    .game-controller {
+        width: 144px;
+        height: 144px;
+    }
+
+    #window, #window-controls {
+        grid-template-columns: 384px 396px 384px;
+        column-gap: 24px;
+    }
+
+    #info-p2 {
+        grid-template-columns: 203px auto;
+    }
+
+    #info-p1 {
+        grid-template-columns: auto 203px;
+    }
+
+    .selected-characters {
+        grid-template-columns: 99px 99px;
+    }
+
+    #roster-list {
+        grid-template-columns: repeat(4, 99px);
+    }
+}

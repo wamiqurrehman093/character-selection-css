@@ -1,0 +1,65 @@
+@media screen and (max-width: 920px) {
+    body {
+        padding: 0;
+    }
+    #window {
+        grid-template-columns: auto;
+        grid-template-areas:
+        "roster-list"
+        "p1-window p2-window";
+        margin: 0px 32px 32px 32px;
+        padding: 0px 32px;
+    }
+   
+    #roster-list {
+        grid-template-columns: repeat(8, 75px);
+        grid-area: roster-list;
+        margin: 0px 0px 250px 0px;
+        height: 225px;
+    }
+
+    #p1-window {
+        justify-content: start;
+        grid-area: p1-window;
+        margin: 250px 0px 0px 0px;
+    }
+
+    #p2-window {
+        justify-content: end;
+        grid-area: p2-window;
+        margin: 250px 0px 0px 0px;
+    }
+
+    #window-controls {
+        grid-template-columns: 180px 48px 180px;
+    }
+
+    .selected-character, .character-profile {
+        width: 75px;
+        height: 75px;
+    }
+
+    .character-picture {
+        width: 68px;
+        height: 68px;
+        top: 2px;
+        left: 2px;
+    }
+
+    .current-character {
+        width: 288px;
+        margin-bottom: 148px;
+    }
+
+    .current-character .character-picture {
+        width: 270px;
+        height: 270px;
+        top: 9px;
+        left: 9px;
+    }
+
+    .p1-cursor, .p2-cursor {
+        outline-offset: -2px;
+        outline-width: 2px;
+    }
+}
