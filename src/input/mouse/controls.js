@@ -4,6 +4,9 @@ function setupInputUsingMouse(){
     for (var i = 0; i < characters.length; i++){
         characters[i].addEventListener("click", function(event){
             var elementID = event.currentTarget.parentElement.id
+            if (["cc-1", "cc-2"].includes(elementID)){
+                return
+            }
             var elementIndex = parseInt(elementID.split("-")[1])
             if (data.p1.selectedCharacters.length < 4) {
                 if (elementID === data.p1.cursor.parentID) {
