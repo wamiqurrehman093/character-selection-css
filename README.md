@@ -1,2 +1,2 @@
 # A Character Selection Page in CSS
-![demo](showcase/CharacterSelectionInCSS.gif "Demo")
+<img src="showcase/CharacterSelectionInCSS.gif" width="800"/>
