@@ -1,4 +1,7 @@
 document.addEventListener("keydown", function (event) {
+    if (modal.style.display !== "none") {
+        return;
+    }
     if (data.p1.keys.selectionKey.includes(event.key)) {
         selectCharacter("p1")
     } else if (data.p2.keys.selectionKey.includes(event.key)) {

@@ -1,4 +1,7 @@
 document.addEventListener("keydown", function(event) {
+    if (modal.style.display !== "none") {
+        return;
+    }
     if (data.p1.keys.movementKeys.includes(event.key)) {
         if (data.p1.selectedCharacters.length < 4) {
             moveP1Cursor(event.key)
