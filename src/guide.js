@@ -4,6 +4,7 @@ modal.style.display = "block";
 if ('ontouchstart' in window || (window.DocumentTouch && document instanceof DocumentTouch) || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0) {
     document.getElementById("mouse-controls-guide").style.display = "block";
 } else {
+    alert("Touch not supported!")
     document.getElementById("keyboard-controls-guide").style.display = "block";
 }
 
